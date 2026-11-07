@@ -4,8 +4,8 @@
 
 ### Download and install
 
-1. Open [GitHub Releases](https://github.com/ops-by-amber/chat-cleaner-free-beta/releases).
-2. Under the newest beta release, find **Assets** and download `chat-cleaner-free-beta-v1.6.0.zip`. Do not download “Source code (zip)”.
+1. Download **[Chat Cleaner Free Beta v1.6.1](https://github.com/ops-by-amber/chat-cleaner-free-beta/raw/refs/heads/main/downloads/chat-cleaner-free-beta-v1.6.1.zip)** from the public repository. This is the updated ZIP with the custom GPT checkbox fix.
+2. Do not download GitHub's automatic “Source code (zip)” file; choose the linked Chrome extension ZIP instead.
 3. Right-click the downloaded ZIP and select **Extract All** (Windows) or double-click to extract (macOS).
 4. Open Chrome and enter `chrome://extensions` into the address bar.
 5. Switch **Developer mode** on (top right).
@@ -31,7 +31,7 @@ Download the replacement beta ZIP when announced, extract it, then update the in
 
 - **No Chat Cleaner button:** confirm Chrome enabled the extension and refresh ChatGPT.
 - **Checkboxes absent:** open the Chat Cleaner panel and enable **Show checkboxes in sidebar**.
-- **Only some chats selectable:** ChatGPT hasn't loaded older sidebar rows. Scroll the left sidebar.
+- **Only some chats selectable:** Install v1.6.1, refresh ChatGPT and reopen Chat Cleaner. This version supports standard and custom GPT conversation links. Older chats still need to load in the sidebar; scroll the left sidebar. Folder and project headings remain excluded.
 - **Batch stops:** open **Operation details** and copy the sanitized log. Don't rerun a large batch without checking what was already removed.
 - **Feedback won't send:** try the direct email link or email **ops.by.amber@gmail.com**. FormSubmit still needs recipient activation and a verified live test.
 - **Can't load extension:** choose the folder containing `manifest.json`, not the ZIP or its parent directory.
