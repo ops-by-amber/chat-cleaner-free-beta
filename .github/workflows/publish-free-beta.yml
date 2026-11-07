@@ -1,0 +1,46 @@
+name: Publish Free Beta ZIP
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'downloads/chat-cleaner-free-beta-v1.6.0.zip'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify browser extension package
+        run: |
+          unzip -t downloads/chat-cleaner-free-beta-v1.6.0.zip
+          python3 - <<'PY'
+          import json
+          import zipfile
+          p = 'downloads/chat-cleaner-free-beta-v1.6.0.zip'
+          with zipfile.ZipFile(p) as z:
+              expected = {'manifest.json', 'cleaner.js', 'cleaner.css', 'icon48.png', 'icon128.png'}
+              if set(z.namelist()) != expected:
+                  raise SystemExit('Unexpected extension ZIP contents')
+              data = json.loads(z.read('manifest.json'))
+              assert data['manifest_version'] == 3
+              assert data['version'] == '1.6.0'
+              assert data['permissions'] == ['storage']
+              assert data['content_scripts'][0]['matches'] == ['https://chatgpt.com/*']
+          print('Package integrity, manifest version and permissions verified')
+          PY
+      - name: Publish or refresh beta release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG=v1.6.0-beta.1
+          ASSET=downloads/chat-cleaner-free-beta-v1.6.0.zip
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "$ASSET" --clobber
+          else
+            gh release create "$TAG" "$ASSET" --title "Chat Cleaner Free Beta v1.6.0" --notes-file RELEASE_NOTES.md --prerelease
+          fi
