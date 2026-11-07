@@ -1,0 +1,54 @@
+name: Build downloadable Chat Cleaner beta patch
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'beta-src/**'
+      - '.github/workflows/package-beta-patch.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Repackage the previous installable beta with tested route changes
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          from zipfile import ZipFile, ZIP_DEFLATED
+          src = Path('downloads/chat-cleaner-free-beta-v1.6.0.zip')
+          dst = Path('downloads/chat-cleaner-free-beta-v1.6.1.zip')
+          package_files = ('manifest.json','cleaner.js','cleaner.css','icon48.png','icon128.png')
+          if not src.exists():
+              raise SystemExit('Previous release ZIP missing')
+          manifest = json.loads(Path('beta-src/manifest.json').read_text())
+          if manifest.get('version') != '1.6.1' or manifest.get('manifest_version') != 3:
+              raise SystemExit('Unexpected manifest version')
+          with ZipFile(src) as prior:
+              if sorted(prior.namelist()) != sorted(package_files) or prior.testzip():
+                  raise SystemExit('Previous package integrity failure')
+              files = {name: prior.read(name) for name in package_files}
+          files['manifest.json'] = Path('beta-src/manifest.json').read_bytes()
+          files['cleaner.js'] = Path('beta-src/cleaner.js').read_bytes()
+          if b'conversationIdFromPath' not in files['cleaner.js']:
+              raise SystemExit('Missing GPT route fix')
+          with ZipFile(dst, 'w', compression=ZIP_DEFLATED, compresslevel=9) as out:
+              for name in package_files:
+                  out.writestr(name, files[name])
+          with ZipFile(dst) as test:
+              assert sorted(test.namelist()) == sorted(package_files) and test.testzip() is None
+          print('Built:', dst)
+          PY
+      - name: Commit permanent public download
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/chat-cleaner-free-beta-v1.6.1.zip
+          git diff --cached --quiet || git commit -m "release: Chat Cleaner beta 1.6.1 GPT sidebar compatibility"
+          git push
