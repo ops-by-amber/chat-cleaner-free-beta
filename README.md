@@ -10,11 +10,13 @@ Free Chrome extension · No subscription · No extra ChatGPT login · [Privacy d
 
 > **Beta warning:** Unpacked extension for desktop Chrome (not yet in the Chrome Web Store). Test it on one disposable chat first. Deletion is irreversible.
 
-## Screenshot
+## Interface preview
 
-![Chat Cleaner beta control panel showing the checkbox toggle, title filter, selection count, Archive and Delete buttons, and optional search controls](assets/chat-cleaner-panel.png)
+<p align="center">
+  <img src="assets/chat-cleaner-v1.6.6-preview.svg" width="960" alt="Complete Chat Cleaner v1.6.6 interface preview with example chats, checkboxes and the full control panel, centred with both sides visible">
+</p>
 
-*Privacy-safe crop of the real extension interface. Chat titles and account information are omitted.*
+*Illustrative demonstration using fictional conversation titles. The whole sidebar and panel are visible; no personal data is shown.*
 
 ## What it does
 
