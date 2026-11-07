@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Chat Cleaner (Preview)",
+  "version": "1.6.1",
+  "description": "Select ChatGPT sidebar chats, archive/delete with confirmation, and optionally submit quick feedback.",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*"
+      ],
+      "js": [
+        "cleaner.js"
+      ],
+      "css": [
+        "cleaner.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
