@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Chat Cleaner v1.6.6 interface preview</title>
+<desc id="desc">Illustrative screenshot with fictional chat titles, showing selection checkboxes and the complete Chat Cleaner control panel, centered with nothing cropped.</desc>
+<rect width="1200" height="720" rx="24" fill="#111217"/>
+<rect x="34" y="34" width="478" height="650" rx="18" fill="#17191f" stroke="#373c46" stroke-width="2"/>
+<text x="65" y="84" font-family="Arial,sans-serif" font-size="28" fill="#fafafa" font-weight="700">ChatGPT</text>
+<text x="65" y="130" font-family="Arial,sans-serif" font-size="15" letter-spacing="1.5" fill="#abb3bf">RECENT CHATS (EXAMPLES)</text>
+<g font-family="Arial,sans-serif" font-size="21" fill="#eef0f4">
+  <text x="123" y="195">Weekly planning</text>
+  <text x="123" y="258">Writing project ideas</text>
+  <text x="123" y="321">Research notes</text>
+  <text x="123" y="384">Meal preparation</text>
+  <text x="123" y="447">Job search notes</text>
+  <text x="123" y="510">Website improvements</text>
+  <text x="123" y="573">Study reminders</text>
+  <text x="123" y="636">Reading list</text>
+</g>
+<g stroke="#cad6eb" stroke-width="3" fill="#fff">
+  <rect x="75" y="171" width="28" height="28" rx="6"/>
+  <rect x="75" y="297" width="28" height="28" rx="6"/>
+  <rect x="75" y="423" width="28" height="28" rx="6"/>
+  <rect x="75" y="486" width="28" height="28" rx="6"/>
+  <rect x="75" y="549" width="28" height="28" rx="6"/>
+  <rect x="75" y="612" width="28" height="28" rx="6"/>
+</g>
+<g fill="#2367bd" stroke="#9cb4d9" stroke-width="3">
+  <rect x="75" y="234" width="28" height="28" rx="6"/>
+  <rect x="75" y="360" width="28" height="28" rx="6"/>
+</g>
+<g stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M82 248 l5 5 9 -11"/>
+  <path d="M82 374 l5 5 9 -11"/>
+</g>
+<rect x="570" y="83" width="584" height="553" rx="18" fill="#292d34" stroke="#6a7586" stroke-width="2"/>
+<text x="597" y="131" fill="#fff" font-family="Arial,sans-serif" font-size="29" font-weight="700">Chat Cleaner</text>
+<text x="803" y="131" fill="#b9c3d3" font-family="Arial,sans-serif" font-size="17">v1.6.6</text>
+<rect x="1070" y="104" width="50" height="46" rx="9" fill="#404652" stroke="#818a96"/>
+<path d="M1089 120 l13 13 m0 -13 l-13 13" stroke="#fff" stroke-width="2"/>
+<rect x="597" y="162" width="523" height="66" rx="9" fill="#226bc4"/>
+<text x="614" y="203" fill="#fff" font-family="Arial,sans-serif" font-size="23" font-weight="700">Checkboxes ON — click to hide</text>
+<rect x="597" y="245" width="523" height="58" rx="8" fill="#22262c" stroke="#5d6877" stroke-width="2"/>
+<text x="615" y="281" fill="#aeb6c1" font-family="Arial,sans-serif" font-size="22">Filter chat titles in sidebar</text>
+<text x="597" y="336" fill="#c4cad5" font-family="Arial,sans-serif" font-size="17">8 matching / 8 loaded in sidebar · 2 selected</text>
+<rect x="597" y="357" width="253" height="56" rx="9" fill="#414750" stroke="#647080"/>
+<rect x="862" y="357" width="258" height="56" rx="9" fill="#414750" stroke="#647080"/>
+<text x="663" y="391" fill="#fff" font-family="Arial,sans-serif" font-size="20">Select matches</text>
+<text x="968" y="391" fill="#fff" font-family="Arial,sans-serif" font-size="20">Clear</text>
+<rect x="597" y="428" width="253" height="58" rx="9" fill="#255bac"/>
+<rect x="862" y="428" width="258" height="58" rx="9" fill="#a42b3b"/>
+<text x="664" y="465" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="21">Archive (2)</text>
+<text x="941" y="465" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="21">Delete (2)</text>
+<path d="M597 507 H1120" stroke="#626b78" stroke-width="1.5"/>
+<text x="607" y="541" fill="#fafafa" font-family="Arial,sans-serif" font-size="19">▸ Content &amp; date search (optional)</text>
+<text x="597" y="573" fill="#cbd2dd" font-family="Arial,sans-serif" font-size="16">Checkboxes appear beside loaded conversations.</text>
+<path d="M597 589 H1120" stroke="#626b78" stroke-width="1.5"/>
+<text x="607" y="616" fill="#f0f2f6" font-family="Arial,sans-serif" font-size="19">▸ Operation details</text>
+<text x="600" y="689" font-family="Arial,sans-serif" font-size="14" fill="#9da8b6">Illustrative interface preview · Fictional chat titles · Nothing cropped</text>
+</svg>
