@@ -10,6 +10,8 @@ Free Chrome extension · No subscription · No extra ChatGPT login · [Privacy d
 
 > **Beta warning:** Unpacked extension for desktop Chrome (not yet in the Chrome Web Store). Test it on one disposable chat first. Deletion is irreversible.
 
+> **Version note:** The current public download is **v1.6.1**. The preview below depicts the improved **v1.6.6 test build**, which is awaiting upload to public downloads. Do not assume the public ZIP already contains those changes.
+
 ## Interface preview
 
 <p align="center">
