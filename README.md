@@ -4,17 +4,17 @@ Free Chrome extension for selecting several chats at once in the ChatGPT sidebar
 
 ## Download
 
-**[Latest GitHub Releases](https://github.com/ops-by-amber/chat-cleaner-free-beta/releases)**
+**[Download Chat Cleaner Free Beta v1.6.1](https://github.com/ops-by-amber/chat-cleaner-free-beta/raw/refs/heads/main/downloads/chat-cleaner-free-beta-v1.6.1.zip)**
 
-Download the file named **`chat-cleaner-free-beta-v1.6.0.zip`** under the latest beta release's **Assets** section.
+Version 1.6.1 fixes missing checkboxes on **custom GPT conversations** (the `/g/...` links) while retaining standard `/c/...` chat support.
 
-Do **not** select GitHub's automatically generated “Source code (zip)” file. That is not the installable extension.
+This fixed ZIP is stored directly in the public repository under [downloads/](downloads/). The earlier v1.6.0 GitHub Release is superseded. Do **not** select GitHub's automatically generated “Source code (zip)” file.
 
 **Beta status:** software is still being tested. Try it with one disposable chat first. Delete actions cannot be undone.
 
 ## Installation (free — no Chrome Web Store registration)
 
-1. Download `chat-cleaner-free-beta-v1.6.0.zip` and **extract** it.
+1. Download `chat-cleaner-free-beta-v1.6.1.zip` and **extract** it.
 2. Open Chrome and enter `chrome://extensions`.
 3. Enable **Developer mode** (top right).
 4. Choose **Load unpacked**.
@@ -27,7 +27,7 @@ See **[detailed installation instructions](INSTALL.md)** and [privacy informatio
 
 ## Features
 
-- Checkboxes beside currently loaded sidebar chats.
+- Checkboxes beside currently loaded standard chat and custom GPT conversation links; GPT landing pages and folder headings are excluded.
 - Filter by chat title and select matching chats.
 - Confirmed bulk Archive or Delete, processed one chat at a time.
 - Stop safely when a menu or confirmation is unrecognized.
@@ -36,7 +36,7 @@ See **[detailed installation instructions](INSTALL.md)** and [privacy informatio
 
 ## Limits and known issues
 
-- ChatGPT may load only part of your chat history in the sidebar; scroll the left sidebar to load more.
+- ChatGPT may load only part of your chat history in the sidebar; scroll the left sidebar to load more. This version recognizes both standard and custom GPT conversation URLs.
 - Folders/project headings are not selectable as conversations.
 - A chat disappearing from the sidebar does **not** independently prove server-side deletion.
 - ChatGPT interface changes may break batch processing. The extension stops on uncertainty.
